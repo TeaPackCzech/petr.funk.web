@@ -329,9 +329,9 @@ h3 {
 .hero-panel {
   position: relative;
   min-height: 0;
-  padding: 24px;
+  padding: 22px;
   display: grid;
-  gap: 14px;
+  gap: 12px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius);
   background:
@@ -342,7 +342,7 @@ h3 {
   overflow: hidden;
 }
 
-.facade-preview::before {
+.reference-preview::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -358,7 +358,7 @@ h3 {
   width: fit-content;
   display: grid;
   gap: 4px;
-  padding: 14px 16px;
+  padding: 12px 16px;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.94);
   color: var(--graphite);
@@ -377,160 +377,90 @@ h3 {
   font-size: 1.08rem;
 }
 
-.facade-section {
-  position: relative;
-  z-index: 1;
-  height: 218px;
-  display: grid;
-  grid-template-columns: 1.15fr 0.95fr 0.34fr 0.24fr 1.38fr;
-  gap: 8px;
-  perspective: 900px;
-}
-
-.layer {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 12px;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: inset 0 -20px 24px rgba(0, 0, 0, 0.12);
-}
-
-.layer span {
-  position: relative;
-  z-index: 1;
-  color: rgba(255, 255, 255, 0.86);
-  font-size: 0.66rem;
-  font-weight: 900;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-}
-
-.wall {
-  background:
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.12) 0 2px, transparent 2px 32px),
-    repeating-linear-gradient(90deg, rgba(31, 35, 40, 0.12) 0 2px, transparent 2px 42px),
-    linear-gradient(145deg, #8d4b2b, #c87843);
-}
-
-.insulation {
-  background:
-    repeating-linear-gradient(135deg, rgba(31, 35, 40, 0.16) 0 2px, transparent 2px 10px),
-    linear-gradient(145deg, #d7c47a, #9f8d47);
-}
-
-.air {
-  border: 1px dashed rgba(255, 255, 255, 0.42);
-  background: rgba(31, 35, 40, 0.44);
-}
-
-.rail {
-  background:
-    linear-gradient(90deg, transparent 0 36%, rgba(255, 255, 255, 0.48) 36% 64%, transparent 64%),
-    linear-gradient(145deg, #626b72, #2f343a);
-}
-
-.cladding {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-rows: 1fr;
-  gap: 8px;
-  padding: 12px;
-  background: rgba(31, 35, 40, 0.52);
-}
-
-.cladding span {
-  position: absolute;
-  right: 8px;
-  bottom: 12px;
-}
-
-.cladding i {
-  display: block;
-  border-radius: 4px;
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.02)),
-    linear-gradient(135deg, #c96a2b, #6f351b);
-  box-shadow: inset 0 -10px 16px rgba(0, 0, 0, 0.16);
-}
-
-.cladding i:nth-child(odd) {
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.01)),
-    linear-gradient(135deg, #9e9386, #4d565c);
-}
-
-.surface-board {
+.reference-grid {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-auto-rows: 112px;
   gap: 12px;
 }
 
-.surface-swatch {
-  min-height: 78px;
-  padding: 14px;
-  border-radius: 6px;
+.reference-tile {
+  position: relative;
+  min-height: 112px;
+  border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  color: var(--white);
   overflow: hidden;
+  background: rgba(31, 35, 40, 0.5);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.18);
 }
 
-.surface-swatch span {
+.reference-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 34%, rgba(17, 20, 23, 0.84));
+  pointer-events: none;
+}
+
+.reference-tile img {
+  width: 100%;
+  height: 100%;
   display: block;
-  margin-bottom: 6px;
-  font-size: 0.72rem;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 0.35s ease;
+}
+
+.reference-tile:hover img,
+.reference-tile:focus img {
+  transform: scale(1.08);
+}
+
+.reference-tile span {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 12px;
+  z-index: 1;
+  color: var(--white);
+  font-size: 0.78rem;
   font-weight: 900;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.72);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
 }
 
-.surface-swatch strong {
-  display: block;
-  max-width: 160px;
-  line-height: 1.22;
+.reference-tile-large {
+  grid-row: span 2;
 }
 
-.swatch-brick {
-  background:
-    repeating-linear-gradient(0deg, transparent 0 23px, rgba(255, 255, 255, 0.12) 23px 25px),
-    repeating-linear-gradient(90deg, transparent 0 58px, rgba(31, 35, 40, 0.24) 58px 60px),
-    linear-gradient(135deg, #b85f2a, #71371d);
+.reference-tile-wide {
+  grid-column: span 2;
 }
 
-.swatch-concrete {
-  background:
-    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.14), transparent 12%),
-    radial-gradient(circle at 76% 70%, rgba(255, 255, 255, 0.1), transparent 10%),
-    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0 1px, transparent 1px 9px),
-    linear-gradient(135deg, #79736c, #32383d);
-}
-
-.hero-card {
+.reference-note {
   position: relative;
   z-index: 2;
-  padding: 20px 22px;
+  padding: 18px 20px;
   border-radius: var(--radius);
   background: rgba(31, 35, 40, 0.86);
   border: 1px solid rgba(255, 255, 255, 0.14);
   backdrop-filter: blur(12px);
 }
 
-.hero-card strong {
+.reference-note strong {
   display: block;
   margin-bottom: 8px;
-  font-size: 1.24rem;
+  font-size: 1.14rem;
+  color: var(--white);
 }
 
-.hero-card p {
+.reference-note p {
   margin-bottom: 0;
   color: rgba(255, 255, 255, 0.74);
+  font-size: 0.94rem;
 }
 
 .stats-band {
@@ -1175,34 +1105,19 @@ h3 {
     width: 100%;
   }
 
-  .facade-section {
-    height: 206px;
-    grid-template-columns: 1fr 0.82fr 0.3fr 0.2fr 1.18fr;
-    gap: 6px;
+  .reference-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 124px;
+    gap: 10px;
   }
 
-  .layer {
-    padding-bottom: 8px;
+  .reference-tile-large,
+  .reference-tile-wide {
+    grid-column: auto;
+    grid-row: auto;
   }
 
-  .layer span {
-    font-size: 0.62rem;
-  }
-
-  .surface-board {
-    gap: 8px;
-  }
-
-  .surface-swatch {
-    min-height: 86px;
-    padding: 12px;
-  }
-
-  .surface-swatch strong {
-    font-size: 0.9rem;
-  }
-
-  .hero-card {
+  .reference-note {
     padding: 18px;
   }
 
