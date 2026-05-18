@@ -328,7 +328,10 @@ h3 {
 
 .hero-panel {
   position: relative;
-  min-height: 470px;
+  min-height: 0;
+  padding: 24px;
+  display: grid;
+  gap: 14px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius);
   background:
@@ -350,10 +353,9 @@ h3 {
 }
 
 .system-label {
-  position: absolute;
-  left: 24px;
-  top: 22px;
+  position: relative;
   z-index: 2;
+  width: fit-content;
   display: grid;
   gap: 4px;
   padding: 14px 16px;
@@ -376,14 +378,12 @@ h3 {
 }
 
 .facade-section {
-  position: absolute;
-  left: 36px;
-  right: 34px;
-  top: 94px;
-  height: 216px;
+  position: relative;
+  z-index: 1;
+  height: 218px;
   display: grid;
-  grid-template-columns: 1.15fr 0.95fr 0.34fr 0.22fr 1.38fr;
-  gap: 10px;
+  grid-template-columns: 1.15fr 0.95fr 0.34fr 0.24fr 1.38fr;
+  gap: 8px;
   perspective: 900px;
 }
 
@@ -402,8 +402,9 @@ h3 {
   position: relative;
   z-index: 1;
   color: rgba(255, 255, 255, 0.86);
-  font-size: 0.72rem;
+  font-size: 0.66rem;
   font-weight: 900;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -444,7 +445,7 @@ h3 {
 
 .cladding span {
   position: absolute;
-  right: 12px;
+  right: 8px;
   bottom: 12px;
 }
 
@@ -464,10 +465,7 @@ h3 {
 }
 
 .surface-board {
-  position: absolute;
-  left: 24px;
-  right: 24px;
-  bottom: 116px;
+  position: relative;
   z-index: 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -475,7 +473,7 @@ h3 {
 }
 
 .surface-swatch {
-  min-height: 82px;
+  min-height: 78px;
   padding: 14px;
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -515,12 +513,9 @@ h3 {
 }
 
 .hero-card {
-  position: absolute;
-  left: 24px;
-  right: 24px;
-  bottom: 24px;
+  position: relative;
   z-index: 2;
-  padding: 22px;
+  padding: 20px 22px;
   border-radius: var(--radius);
   background: rgba(31, 35, 40, 0.86);
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -1112,7 +1107,7 @@ h3 {
   }
 
   .hero-panel {
-    min-height: 500px;
+    min-height: 0;
   }
 
   .stats-grid,
@@ -1173,22 +1168,17 @@ h3 {
   }
 
   .hero-panel {
-    min-height: 540px;
+    padding: 16px;
   }
 
   .system-label {
-    left: 16px;
-    top: 16px;
-    right: 16px;
+    width: 100%;
   }
 
   .facade-section {
-    left: 16px;
-    right: 16px;
-    top: 94px;
-    height: 210px;
+    height: 206px;
     grid-template-columns: 1fr 0.82fr 0.3fr 0.2fr 1.18fr;
-    gap: 7px;
+    gap: 6px;
   }
 
   .layer {
@@ -1200,9 +1190,6 @@ h3 {
   }
 
   .surface-board {
-    left: 16px;
-    right: 16px;
-    bottom: 142px;
     gap: 8px;
   }
 
@@ -1216,9 +1203,6 @@ h3 {
   }
 
   .hero-card {
-    left: 16px;
-    right: 16px;
-    bottom: 16px;
     padding: 18px;
   }
 
