@@ -3,6 +3,7 @@ const menuToggle = document.querySelector("[data-menu-toggle]");
 const mobilePanel = document.querySelector("[data-mobile-panel]");
 const form = document.querySelector("[data-contact-form]");
 const formNote = document.querySelector("[data-form-note]");
+const parallaxSection = document.querySelector("[data-parallax]");
 
 const closeMenu = () => {
   if (!menuToggle || !mobilePanel) return;
@@ -27,18 +28,31 @@ if (menuToggle && mobilePanel) {
 }
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    closeMenu();
-  }
+  if (event.key === "Escape") closeMenu();
 });
 
-if (header) {
-  const updateHeader = () => {
-    header.classList.toggle("has-shadow", window.scrollY > 20);
-  };
-  updateHeader();
-  window.addEventListener("scroll", updateHeader, { passive: true });
-}
+const updateHeader = () => {
+  if (!header) return;
+  header.classList.toggle("has-shadow", window.scrollY > 18);
+};
+
+const updateParallax = () => {
+  if (!parallaxSection) return;
+  const offset = Math.min(window.scrollY * 0.08, 42);
+  parallaxSection.style.setProperty("--parallax-y", `${offset}px`);
+};
+
+updateHeader();
+updateParallax();
+
+window.addEventListener(
+  "scroll",
+  () => {
+    updateHeader();
+    updateParallax();
+  },
+  { passive: true }
+);
 
 const revealItems = document.querySelectorAll(".reveal");
 
@@ -52,7 +66,7 @@ if ("IntersectionObserver" in window) {
         }
       });
     },
-    { threshold: 0.12 }
+    { threshold: 0.14, rootMargin: "0px 0px -50px 0px" }
   );
 
   revealItems.forEach((item) => observer.observe(item));
@@ -63,7 +77,7 @@ if ("IntersectionObserver" in window) {
 if (form && formNote) {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    formNote.textContent = "Děkujeme, formulář je nyní v demo režimu. Pro skutečnou poptávku prosím zavolejte nebo napište e-mail.";
+    formNote.textContent = "Děkujeme, formulář je v demo režimu. Pro skutečnou poptávku prosím zavolejte nebo napište e-mail.";
     form.reset();
   });
 }
