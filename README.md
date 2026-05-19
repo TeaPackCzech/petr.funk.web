@@ -1,44 +1,50 @@
-# Petr Funk - moderní stavební prezentace
+# Petr Funk - prémiová stavební prezentace
 
-Statický jednostránkový web pro lokálního řemeslníka Petra Funka z Poličky. Web prezentuje zednické práce, odvětrávané fasády, sádrokartony, rekonstrukce bytových jader, zateplování fasád a stavební práce kolem domu.
+Statický jednostránkový web pro lokálního řemeslníka Petra Funka z Poličky. Web prezentuje zednické práce, odvětrávané fasády, sádrokartony, rekonstrukce, zateplování fasád a stavební práce kolem domu.
 
-## Co bylo upraveno
+## Popis webu
 
-- kompletně přepracovaný vizuální styl do moderní stavební prezentace
-- nové hero s vlastní CSS stavební kompozicí bez cizích fotografií
-- prémiový grid služeb s hover efekty a číslováním
-- tmavá důvěryhodná sekce „Proč vybrat“
-- výrazný pás čísel a důvěry
-- moderní pětikroková timeline spolupráce
-- výraznější kontaktní sekce s telefonním CTA
-- rozšířený formulář o typ práce
-- jemné scroll reveal animace, parallax pozadí a sticky header blur
-- responzivní mobilní verze se spodním tlačítkem Zavolat
+Cílem je ukázat klientovi hotový moderní návrh, který nepůsobí jako obyčejná vizitka, ale jako profesionální stavební prezentace. První obrazovka staví na velkém stavebním vizuálu, silné typografii, tmavém overlayi a jasných CTA tlačítkách pro telefon a poptávku.
 
-## Použitý styl
+Web je připravený jako demo pro GitHub Pages a obsahuje SEO metadata, Open Graph a Schema.org JSON-LD pro `LocalBusiness`, `Contractor` a `HomeAndConstructionBusiness`.
 
-Směr vychází z moderních stavebních a architektonických prezentací: čisté bloky, velká typografie, technický rastr, stavební linky, betonově světlé plochy a teplý cihlově-měděný akcent.
+## Inspirační směr
 
-Barevnost:
+Vizuální styl je inspirovaný moderními stavebními a architektonickými weby typu DPR Construction, Skanska, Turner Construction, Mortenson a BIG. Výsledkem není kopie, ale lokálně uvěřitelný web pro řemeslníka s výrazně profesionálnějším dojmem.
 
-- pozadí: `#F7F6F2` / `#F5F3EE`
-- tmavá: `#1F2328`
-- sekundární tmavá: `#343A40`
-- měděná: `#B86432` / `#C26B3A`
-- betonová: `#D8D4CC`
-- bílá: `#FFFFFF`
+Použité principy:
 
-Typografie používá systémový stack s preferencí fontů `Inter` a `Manrope`, pokud jsou v zařízení dostupné.
+- velký hero s fotkou, tmavým overlayem a technickými linkami
+- architektonická typografie se širokými sekcemi
+- asymetrický grid služeb s výraznou fotokartou
+- tmavá sekce důvěry s animovanými čísly
+- technický CSS diagram odvětrávané fasády
+- timeline spolupráce s animovanou linkou
+- konverzní kontaktní sekce s formulářem v demo režimu
+- mobilní sticky CTA „Zavolat“
 
-## Použité technologie
+## Technologie
 
 - HTML5
 - CSS3
 - JavaScript bez frameworků
-- Schema.org JSON-LD pro `LocalBusiness`, `Contractor` a `HomeAndConstructionBusiness`
-- SEO a Open Graph meta tagy
+- Google Fonts: `Space Grotesk` a `Inter`
+- IntersectionObserver pro reveal animace
+- requestAnimationFrame pro parallax a scroll efekty
 
-Bez buildu, bez Node.js, bez frameworku.
+Bez Reactu, bez Node.js, bez buildu a bez databáze.
+
+## Fotky a vizuální zdroje
+
+Použité jsou externí ilustrační fotky z Unsplash CDN:
+
+- hero stavební fotografie: `https://images.unsplash.com/photo-1504307651254-35680f356dfd`
+- stavební intro fotografie: `https://images.unsplash.com/photo-1541888946425-d81bb19240f5`
+- fasádní / konstrukční detail: `https://images.unsplash.com/photo-1565008447742-97f6f38c985c`
+- stavební vizuál v kartě služeb: `https://images.unsplash.com/photo-1541888946425-d81bb19240f5`
+- lokalitní / stavební vizuál: `https://images.unsplash.com/photo-1597047084897-51e81819a499`
+
+Před ostrým spuštěním je vhodné tyto ilustrační fotografie nahradit reálnými fotkami prací, detailů fasád, rekonstrukcí nebo stavby klienta.
 
 ## Jak spustit lokálně
 
@@ -50,7 +56,7 @@ Volitelně lze spustit statický server:
 python3 -m http.server 8080
 ```
 
-Poté otevřete:
+Poté otevřít:
 
 ```text
 http://localhost:8080
@@ -68,12 +74,20 @@ https://teapackczech.github.io/petr.funk.web/
 
 ## Kontakt klienta
 
-**Petr Funk**  
-IČO: 65186494  
-Adresa: Paseky 127, 572 01 Polička – Horní Předměstí  
-Telefon: +420 724 361 612  
-E-mail: funk.petr@seznam.cz
+**Petr Funk**
+
+- IČO: 65186494
+- Adresa: Paseky 127, 572 01 Polička - Horní Předměstí
+- Telefon: +420 724 361 612
+- E-mail: funk.petr@seznam.cz
 
 ## Demo poznámka
 
-Jedná se o ukázkový prezentační návrh připravený pro klientskou prezentaci. Formulář je v demo režimu a je připravený pro pozdější napojení na backend nebo externí formulářovou službu.
+Jedná se o ukázkový prezentační návrh připravený pro obchodní prezentaci klientovi. Formulář je v demo režimu a je připravený pro pozdější napojení na backend, e-mailovou službu nebo externí formulářové řešení.
+
+## Co doplnit před ostrým spuštěním
+
+- reálné fotografie klientových prací
+- finální souhlas s texty a rozsahem služeb
+- případné napojení formuláře na e-mail nebo CRM
+- analytiku a měření konverzí, pokud bude potřeba
