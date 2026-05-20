@@ -36,12 +36,9 @@ Bez Reactu, bez Node.js, bez buildu a bez databáze.
 
 ## Fotky a vizuální zdroje
 
-Hero využívá externí ilustrační stavební fotografii z Unsplash CDN:
+Hero i obsahové vizuály jsou lokálně uložené AI generované ilustrační fotografie rodinných domů a řemeslných prací:
 
-- hero stavební fotografie: `https://images.unsplash.com/photo-1504307651254-35680f356dfd`
-
-Ostatní vizuály jsou lokálně uložené AI generované ilustrační fotografie rodinných domů a řemeslných prací:
-
+- `assets/images/hero-rd-stavba.jpg` - úvodní fotografie stavby/rekonstrukce rodinného domu
 - `assets/images/rd-novabrik-fasada.jpg` - zateplení RD a fasádní obklad typu Novabrik
 - `assets/images/rd-sadrokarton-strop.jpg` - montáž sádrokartonového stropu v interiéru
 - `assets/images/rd-stavba-zdi.jpg` - zednická práce a stavba zdi u RD
