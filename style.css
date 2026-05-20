@@ -638,16 +638,25 @@ h3 {
   overflow: hidden;
 }
 
-.services::before {
-  content: "";
-  position: absolute;
-  top: 44px;
-  right: 0;
-  width: min(42vw, 520px);
-  height: 72%;
-  background: var(--concrete);
-  clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 82%);
-  opacity: 0.65;
+.services .section-head {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) minmax(0, 3fr);
+  align-items: end;
+  gap: clamp(18px, 3vw, 34px);
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: clamp(22px, 3vw, 34px);
+}
+
+.services .section-head::after {
+  display: none;
+}
+
+.services .section-head h2 {
+  max-width: 760px;
+  justify-self: end;
+  font-size: clamp(2rem, 3.6vw, 3.65rem);
+  line-height: 1.02;
 }
 
 .service-grid {
@@ -732,46 +741,13 @@ h3 {
 
 .service-card h3 {
   margin-top: auto;
-  padding-top: 54px;
+  padding-top: 44px;
 }
 
 .service-card p {
   margin: 12px 0 0;
   color: var(--muted);
   font-weight: 600;
-}
-
-.service-featured {
-  grid-column: span 6;
-  grid-row: span 2;
-  min-height: 400px;
-  color: var(--white);
-  background: var(--black);
-}
-
-.service-featured .service-bg {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg, rgba(20, 20, 20, 0.12), rgba(20, 20, 20, 0.86)),
-    url("assets/images/rd-stavba-zdi.jpg") center / cover no-repeat;
-  transform: scale(1.02);
-  transition: transform 0.45s ease;
-}
-
-.service-featured:hover .service-bg {
-  transform: scale(1.08);
-}
-
-.service-featured::after {
-  border-color: rgba(255, 255, 255, 0.28);
-  background:
-    linear-gradient(90deg, transparent 48%, rgba(255, 255, 255, 0.44) 49% 51%, transparent 52%),
-    linear-gradient(0deg, transparent 48%, rgba(255, 255, 255, 0.44) 49% 51%, transparent 52%);
-}
-
-.service-featured p {
-  color: rgba(255, 255, 255, 0.78);
 }
 
 .facade {
@@ -1319,11 +1295,6 @@ h3 {
     grid-column: span 6;
   }
 
-  .service-featured {
-    grid-column: span 12;
-    min-height: 380px;
-  }
-
   .timeline {
     grid-template-columns: 1fr;
     padding-top: 0;
@@ -1439,6 +1410,15 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .services .section-head {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .services .section-head h2 {
+    justify-self: start;
+  }
+
   .section-head::after {
     transform: none;
   }
@@ -1448,14 +1428,9 @@ h3 {
     grid-auto-rows: auto;
   }
 
-  .service-card,
-  .service-featured {
+  .service-card {
     grid-column: auto;
     min-height: 220px;
-  }
-
-  .service-featured {
-    min-height: 320px;
   }
 
   .layer-diagram {
@@ -1538,7 +1513,7 @@ h3 {
   }
 
   .service-card h3 {
-    padding-top: 62px;
+    padding-top: 44px;
   }
 
   .facade-photo img,
