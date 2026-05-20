@@ -36,15 +36,18 @@ Bez Reactu, bez Node.js, bez buildu a bez databáze.
 
 ## Fotky a vizuální zdroje
 
-Použité jsou externí ilustrační fotky z Unsplash CDN:
+Hero využívá externí ilustrační stavební fotografii z Unsplash CDN:
 
 - hero stavební fotografie: `https://images.unsplash.com/photo-1504307651254-35680f356dfd`
-- stavební intro fotografie: `https://images.unsplash.com/photo-1541888946425-d81bb19240f5`
-- fasádní / konstrukční detail: `https://images.unsplash.com/photo-1565008447742-97f6f38c985c`
-- stavební vizuál v kartě služeb: `https://images.unsplash.com/photo-1541888946425-d81bb19240f5`
-- lokalitní / stavební vizuál: `https://images.unsplash.com/photo-1597047084897-51e81819a499`
 
-Před ostrým spuštěním je vhodné tyto ilustrační fotografie nahradit reálnými fotkami prací, detailů fasád, rekonstrukcí nebo stavby klienta.
+Ostatní vizuály jsou lokálně uložené AI generované ilustrační fotografie rodinných domů a řemeslných prací:
+
+- `assets/images/rd-novabrik-fasada.jpg` - zateplení RD a fasádní obklad typu Novabrik
+- `assets/images/rd-sadrokarton-strop.jpg` - montáž sádrokartonového stropu v interiéru
+- `assets/images/rd-stavba-zdi.jpg` - zednická práce a stavba zdi u RD
+- `assets/images/rd-remeslo-drevo.jpg` - řemeslná práce se dřevem v rekonstrukci
+
+Před ostrým spuštěním je vhodné ilustrační fotografie nahradit reálnými fotkami prací, detailů fasád, rekonstrukcí nebo stavby klienta.
 
 ## Jak spustit lokálně
 
