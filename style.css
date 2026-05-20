@@ -659,6 +659,27 @@ h3 {
   line-height: 1.02;
 }
 
+.process-head {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) minmax(0, 2.4fr);
+  align-items: end;
+  gap: clamp(18px, 3vw, 34px);
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: clamp(22px, 3vw, 34px);
+}
+
+.process-head::after {
+  display: none;
+}
+
+.process-head h2 {
+  max-width: 700px;
+  justify-self: end;
+  font-size: clamp(2rem, 3.5vw, 3.45rem);
+  line-height: 1.02;
+}
+
 .service-grid {
   position: relative;
   display: grid;
@@ -1415,7 +1436,13 @@ h3 {
     align-items: start;
   }
 
-  .services .section-head h2 {
+  .process-head {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .services .section-head h2,
+  .process-head h2 {
     justify-self: start;
   }
 
